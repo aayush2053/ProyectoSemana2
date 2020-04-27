@@ -34,6 +34,8 @@ public class SampleController {
 	
 	@FXML
 	private Label alerta1;
+	@FXML
+	private Label alerta4;
 	
 	@FXML
 	private TextField txtCif;
@@ -88,6 +90,11 @@ public class SampleController {
         
         if(file != null) 
 	        System.out.println(file.getAbsolutePath());
+        
+        alerta2.setVisible(false);
+		alerta3.setVisible(false);
+		alerta1.setVisible(false);
+		alerta4.setVisible(true);
 
 	}
 	
@@ -113,7 +120,7 @@ public class SampleController {
 			
 			cursor.close();     // Cerrar ResultSet
 			sentencia.close(); // Cerrar Statement
-			conexion.close();  // Cerrar conexión
+			conexion.close();  // Cerrar conexiÃ³n
 			
 		}
 		catch (ClassNotFoundException cn) {cn.printStackTrace();} 
@@ -159,10 +166,11 @@ public class SampleController {
 		alerta2.setVisible(false);
 		alerta3.setVisible(false);
 		alerta1.setVisible(false);
+		alerta4.setVisible(false);
 	}
 	
 	
-	public void añadir() {
+	public void aÃ±adir() {
 		
 		
 		
@@ -209,6 +217,7 @@ public class SampleController {
 		alerta2.setVisible(true);
 		alerta3.setVisible(false);
 		alerta1.setVisible(false);
+		alerta4.setVisible(false);
 	}
 	
 	
@@ -246,6 +255,7 @@ public class SampleController {
 			alerta1.setVisible(false);
 			alerta2.setVisible(false);
 			alerta3.setVisible(true);
+			alerta4.setVisible(false);
 			
 		}
 	}
@@ -300,6 +310,7 @@ public class SampleController {
 			alerta1.setVisible(true);
 			alerta2.setVisible(false);
 			alerta3.setVisible(false);
+			alerta4.setVisible(false);
 		}
 	}
 	
