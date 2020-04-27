@@ -53,5 +53,6 @@
     <Label fx:id="alerta2" layoutX="53.0" layoutY="383.0" prefHeight="20.0" prefWidth="136.0" text="Alta Realizada" visible="false" />
     <Label fx:id="alerta3" layoutX="53.0" layoutY="415.0" prefWidth="148.0" text="Proveedor eliminado" visible="false" />
     <Label fx:id="alerta1" layoutX="53.0" layoutY="444.0" prefWidth="134.0" text="Modificar realizado" visible="false" />
+    <Label fx:id="alerta4" layoutX="217.0" layoutY="415.0" prefWidth="116.0" text="Archivo Subido" visible="false" />
   </children>
 </AnchorPane>
