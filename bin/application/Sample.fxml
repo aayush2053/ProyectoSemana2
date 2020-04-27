@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="563.0" prefWidth="734.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.SampleController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ListView fx:id="lvProveedores" layoutX="430.0" layoutY="66.0" onMouseClicked="#cargarProveedores" prefHeight="398.0" prefWidth="269.0" />
+    <TabPane layoutX="14.0" layoutY="19.0" prefHeight="355.0" prefWidth="353.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="ALTA Y MODIFICAR">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="355.0" prefWidth="353.0">
+              <children>
+                <Label layoutX="13.0" layoutY="26.0" prefHeight="24.0" prefWidth="27.0" text="CIF" />
+                <Label layoutX="14.0" layoutY="66.0" prefWidth="134.0" text="RAZON DE  SOCIAL" />
+                <Label layoutX="13.0" layoutY="113.0" prefWidth="149.0" text="REGISTRO NOTARIAL" />
+                <Label layoutX="14.0" layoutY="157.0" prefWidth="190.0" text="SEGURO RESPONSIBILIDAD" />
+                <Label layoutX="13.0" layoutY="198.0" prefWidth="135.0" text="SEGURO IMPORTE" />
+                <Label layoutX="14.0" layoutY="242.0" prefWidth="176.0" text="FECHA HOMOLOGACION" />
+                <Button id="aniadir" fx:id="añadir" layoutX="28.0" layoutY="273.0" mnemonicParsing="false" onAction="#añadir" prefWidth="82.0" text="AÑADIR" />
+                <TextField fx:id="txtCif" layoutX="203.0" layoutY="24.0" prefWidth="136.0" />
+                <TextField fx:id="txtRaz" layoutX="203.0" layoutY="66.0" prefWidth="136.0" />
+                <TextField fx:id="txtRespons" layoutX="205.0" layoutY="157.0" prefWidth="134.0" />
+                <TextField fx:id="txtReg" layoutX="204.0" layoutY="110.0" prefWidth="136.0" />
+                <TextField fx:id="txtSegImp" layoutX="204.0" layoutY="198.0" prefWidth="135.0" />
+                <TextField fx:id="txtFecha" layoutX="204.0" layoutY="236.0" prefWidth="135.0" />
+                <Button id="modificar" layoutX="232.0" layoutY="273.0" mnemonicParsing="false" onAction="#modificar" text="MODIFICAR" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="ELIMINAR">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="283.0" prefWidth="353.0">
+              <children>
+                <Button fx:id="eliminar" layoutX="131.0" layoutY="157.0" mnemonicParsing="false" onAction="#eliminar" text="ELIMINAR" />
+                <Label layoutX="31.0" layoutY="91.0" prefWidth="292.0" text="P.S.:Por favor seleciona antes el proveedor " />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <Label layoutX="477.0" layoutY="29.0" prefWidth="176.0" text="LISTA DE PROVEEDORES" />
+    <Button fx:id="subirArchivo" layoutX="518.0" layoutY="501.0" mnemonicParsing="false" onAction="#subirArchivo" prefWidth="135.0" text="UPLOAD FILE" />
+    <Button fx:id="limpiar" layoutX="96.0" layoutY="522.0" mnemonicParsing="false" onAction="#limpiar" onMouseClicked="#limpiar" prefWidth="190.0" text="BORRAR CAMPOS" />
+    <Button fx:id="btRefrescar" layoutX="96.0" layoutY="487.0" mnemonicParsing="false" onAction="#cargarProveedores" prefWidth="190.0" text="REFRESCAR" />
+    <TextArea layoutX="36.0" layoutY="374.0" prefHeight="101.0" prefWidth="309.0" wrapText="true" />
+    <Label fx:id="alerta2" layoutX="53.0" layoutY="383.0" prefHeight="20.0" prefWidth="136.0" text="Alta Realizada" visible="false" />
+    <Label fx:id="alerta3" layoutX="53.0" layoutY="415.0" prefWidth="148.0" text="Proveedor eliminado" visible="false" />
+    <Label fx:id="alerta1" layoutX="53.0" layoutY="444.0" prefWidth="134.0" text="Modificar realizado" visible="false" />
+  </children>
+</AnchorPane>
